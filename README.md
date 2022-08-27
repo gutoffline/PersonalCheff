@@ -35,7 +35,7 @@ python manage.py runserver
 ```
 - [X] Alterar o idioma do projeto para `pt-br`
     - Abrir o arquivo `settings.py` e na linha 106 trocar `en-us` para `pt-br`
-- [ ] Alterar o timezone do projeto para `America/Sao_Paulo`
+- [X] Alterar o timezone do projeto para `America/Sao_Paulo`
 - [ ] Criar o app receitas
 - [ ] Registrar o app receitas
 - [ ] Configurar a rota inicial(index)
