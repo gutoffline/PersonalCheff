@@ -41,7 +41,14 @@ python manage.py runserver
 * preciso estar dentro da pasta do projeto (PersonalcheffProj)
 python manage.py startapp receitas
 ```
-- [ ] Registrar o app receitas
+- [X] Registrar o app receitas
+```
+no arquivo settings.py adicionar o app receitas na lista de apps 
+INSTALLED_APPS[
+    ...
+    'receitas',
+]
+```
 - [ ] Configurar a rota inicial(index)
 - [ ] Criar a view para a rota inicial
 - [ ] Registrar a rota inicial
