@@ -49,9 +49,9 @@ INSTALLED_APPS[
     'receitas',
 ]
 ```
-- [ ] Configurar a rota inicial(index)
-- [ ] Criar a view para a rota inicial
-- [ ] Registrar a rota inicial
+- [X] Configurar a rota inicial(index)
+- [X] Criar a view para a rota inicial
+- [X] Registrar a rota inicial
 - [ ] Criar o arquivo index.html
 
 ## 📝 Licença
