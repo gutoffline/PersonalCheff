@@ -61,6 +61,14 @@ INSTALLED_APPS[
             ]
         ```
 - [X] Criar a view para a rota inicial
+    - Dentro da pasta receitas(app) abrir o arquivo `views.py` 
+    ```python
+        from django.shortcuts import render
+        from django.http import HttpResponse
+
+        def index(request):
+            return HttpResponse("<h1>Seja bem</h1>")
+    ```
 - [X] Registrar a rota inicial
 - [ ] Criar o arquivo index.html
 
