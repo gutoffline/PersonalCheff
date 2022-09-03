@@ -50,6 +50,16 @@ INSTALLED_APPS[
 ]
 ```
 - [X] Configurar a rota inicial(index)
+    - Dentro da pasta receita(app) criar o arquivo `urls.py`
+    - no arquivo `urls.py` 
+        ```python
+            from django.urls import path
+            from . import views
+
+            urlpatterns = [
+                path('', views.index, name='index')
+            ]
+        ```
 - [X] Criar a view para a rota inicial
 - [X] Registrar a rota inicial
 - [ ] Criar o arquivo index.html
