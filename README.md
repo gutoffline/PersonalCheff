@@ -67,9 +67,19 @@ INSTALLED_APPS[
         from django.http import HttpResponse
 
         def index(request):
-            return HttpResponse("<h1>Seja bem</h1>")
+            return HttpResponse("<h1>Seja bem vindo</h1>")
     ```
 - [X] Registrar a rota inicial
+    - Dentro da pasta PersonalCheffProj(app) abrir o arquivo `urls.py`
+    ```python
+    from django.contrib import admin
+    from django.urls import path, include
+
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('',include('receitas.urls')),
+    ]
+    ```
 - [ ] Criar o arquivo index.html
 
 ## 📝 Licença
