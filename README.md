@@ -16,6 +16,8 @@ Segue a lista de tarefas a serem desenvolvidas no projeto:
 ```
 python -m venv .\venv\
 venv\Scripts\activate
+# se der erro no powershell utilize o comando abaixo para resolver a permissão
+# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 - [X] Instalar o Django
 ```
@@ -90,6 +92,19 @@ INSTALLED_APPS[
     def index(request):
         return render(request,'index.html')
     ```
+- [ ] Integrar arquivos estáticos (CSS, JS)
+- [ ] Utilizando links
+- [ ] Criando o base.html
+- [ ] Separando em partials
+- [ ] Renderizando dados dinamicamente
+- [ ] Criando um dicionario com as receitas
+- [ ] Criando o banco de dados(MySQL/MariaDB)
+- [ ] Instalando o conector do bando de dados MySQL
+- [ ] Criando o modelo da receita
+- [ ] Criando a migration (mapeamento)
+- [ ] Realizando a migration
+- [ ] Registrando um modelo no admin
+- [ ] Criando um usuário para o ambiente administrativo
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
