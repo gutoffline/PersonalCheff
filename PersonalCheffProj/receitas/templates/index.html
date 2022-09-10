@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,21 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PersonalCheff</title>
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+    <link rel="shortcut icon" href="{% static 'logo.png' %}" type="image/x-icon">
 </head>
 <body>
-    <h1>PersonalCheff</h1>
+    <h1>
+        <img src="{% static 'logo.png' %}" class="imagem-logo">
+        PersonalCheff
+    </h1>
     <h2>Seu site de receitas</h2>
 
-    <table border="1">
+    <table border="1" class="tabela-receitas">
         <tr>
             <th>Receita</th>
             <th>Vídeo</th>
             <th>Ações</th>
         </tr>
         <tr>
-            <td>Suco de laranja</td>
+            <td>
+                <img src="{% static 'suco.png' %}" class="icone-suco">
+                Suco de laranja
+            </td>
             <td>https://www.youtube.com/watch?v=Nn9140bDPnc</td>
             <td><a href="sucodelaranja">Ver receita completa</a></td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{% static 'suco.png' %}" class="icone-suco">
+                Suco de limão
+            </td>
+            <td>https://www.youtube.com/watch?v=7aavIewcSY4</td>
+            <td>
+                <a href="sucodelimao">Ver receita completa</a>
+            </td>
         </tr>
     </table>
 </body>

@@ -92,7 +92,28 @@ INSTALLED_APPS[
     def index(request):
         return render(request,'index.html')
     ```
-- [ ] Integrar arquivos estáticos (CSS, JS)
+- [X] Integrar arquivos estáticos (CSS, JS, IMG)
+    - Dentro da pasta do projeto (PersonalCheffProj), criar a pasta `static`
+    - Dentro da pasta `static`, colocar as imagens, os arquivos css e os arquivos js que for utilizar
+    - No arquivo `settings.py`: 
+        - realize a importação da biblioteca `os` através do comando `import os` 
+        - na linha ~58 adicione o caminho dos templates da seguinte forma:
+        ```python
+        'DIRS': [os.path.join(BASE_DIR, 'receitas/templates')],
+        ```
+        - no final do arquivo, após a linha `STATIC_URL` insira o seguinte código:
+        ```python
+        STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+        STATICFILES_DIRS = [
+            os.path.join(BASE_DIR, 'PersonalCheffProj/static')
+        ]
+        ```
+        - `STATIC_URL`: é a configuração da rota através do qual os arquivos estáticos seram servidos
+        - `STATIC_ROOT`: configuração da pasta de saída(destino) dos arquivos estáticos
+        - `STATICFILES_DIRS`: cofiguração da(s) pasta de origem dos arquivos estáticos.
+        - após realizar essas configurações execute, no terminal, o comando `python manage.py collectstatic`
+        - na primeira linha do arquivo `index.html` insira `{% load static %}`. Esse comando deve ser usado em todos os arquivos em que você for utilizar arquivos estáticos.
+        - insira uma imagem utilizando o comando `<img src="{% static 'logo.png' %}">`. Sempre que for utilizar um arquivo estático você deve utilizar `{% static 'nome-do-arquivo' %}`
 - [ ] Utilizando links
 - [ ] Criando o base.html
 - [ ] Separando em partials

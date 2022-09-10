@@ -1,0 +1,17 @@
+body{
+    background-color: #cacaca;
+    color: #181818;
+    font-family: 'Segoe UI';
+}
+
+.imagem-logo{
+    width: 150px;
+}
+
+.tabela-receitas{
+    width: 90%;
+}
+
+.icone-suco{
+    height: 20px;
+}
