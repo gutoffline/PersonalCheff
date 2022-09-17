@@ -119,7 +119,30 @@ INSTALLED_APPS[
         ```python
         <a href="{% url 'index' %}">Página inicial</a>
         ```
-- [ ] Criando o base.html
+- [X] Criando o base.html
+    - na pasta `templates`crie o arquivo `base.html`. Esse arquivo contém todo o código de estrutura comum à todas as páginas. Nesse arquivo deve ficar tudo que tiver antes do `body` e tudo que tiver depois do `/body`.
+    - nesse arquivo deve conter o `{% load static %}`
+    - nesse arquivo, no local aonde será carregado o conteúdo das outras páginas, deve existir os delimitadores `{% block content %}` e `{% endblock %}`
+    - o código do `base.html` será algo parecido com:
+        ```python
+        {% load static %}
+        <!DOCTYPE html>
+        <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>PersonalCheff</title>
+            <link rel="stylesheet" href="{% static 'estilos.css' %}">
+            <link rel="shortcut icon" href="{% static 'logo.png' %}" type="image/x-icon">
+        </head>
+        <body>
+        {% block content %}
+        
+        {% endblock %}
+        </body>
+        </html>
+        ```
 - [ ] Separando em partials
 - [ ] Renderizando dados dinamicamente
 - [ ] Criando um dicionario com as receitas
