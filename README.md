@@ -114,7 +114,11 @@ INSTALLED_APPS[
         - após realizar essas configurações execute, no terminal, o comando `python manage.py collectstatic`
         - na primeira linha do arquivo `index.html` insira `{% load static %}`. Esse comando deve ser usado em todos os arquivos em que você for utilizar arquivos estáticos.
         - insira uma imagem utilizando o comando `<img src="{% static 'logo.png' %}">`. Sempre que for utilizar um arquivo estático você deve utilizar `{% static 'nome-do-arquivo' %}`
-- [ ] Utilizando links
+- [X] Utilizando links
+    - para criar um link para a página index, independente de onde você esteja utilize o comando `url`:
+        ```python
+        <a href="{% url 'index' %}">Página inicial</a>
+        ```
 - [ ] Criando o base.html
 - [ ] Separando em partials
 - [ ] Renderizando dados dinamicamente
