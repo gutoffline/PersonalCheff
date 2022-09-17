@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'partials/header.html' %}
+{% include 'partials/menu.html' %}
+    <h2>Entre em contato</h2>
+    <form>
+        Nome:<input><br>
+        Telefone: <input type="tel"><br>
+        Mensagem:<br>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    </form>
+{% include 'partials/footer.html' %}
+{% endblock %}

@@ -30,3 +30,11 @@ footer{
 footer a{
     color: lightcoral;
 }
+
+nav{
+    text-align: center;
+    background-color: darkgray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 8px;
+}
