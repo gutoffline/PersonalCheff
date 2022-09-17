@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% include 'partials/header.html' %}
     <h1>PersonalCheff</h1>
     <h2>Receita de suco de Limão</h2>
     <h3>Modo de preparo</h3>
@@ -9,4 +10,5 @@
         <li>Esprema o limão</li>
         <li>Adoce a gosto</li>
     </ul>
+{% include 'partials/footer.html' %}
 {% endblock %}

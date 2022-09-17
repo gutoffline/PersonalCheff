@@ -1,12 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <h1>
-        <img src="{% static 'logo.png' %}" class="imagem-logo">
-        PersonalCheff
-    </h1>
-    <h2>Seu site de receitas</h2>
-
+{% include 'partials/header.html' %}
     <table border="1" class="tabela-receitas">
         <tr>
             <th>Receita</th>
@@ -32,4 +27,5 @@
             </td>
         </tr>
     </table>
+{% include 'partials/footer.html' %}
 {% endblock %}

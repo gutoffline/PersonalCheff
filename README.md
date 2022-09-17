@@ -143,7 +143,11 @@ INSTALLED_APPS[
         </body>
         </html>
         ```
-- [ ] Separando em partials
+- [X] Separando em partials
+    - criar uma pasta chamada `partials` dentro da pasta `templates`
+    - dentro da pasta `partials`crie os arquivos que serão as **partes globais** utilizadas no seu projeto como `header.html`, `footer.html`, `menu.html`, `side-bar.html`, `banner.html`, etc. No nosso exemplo criamos as partials `header.html` e `footer.html`
+    - insira em cada um dos arquivos partials seus códigos correspondentes. Exemplo:  no arquivo `header.html` eu insiro todo o conteúdo que eu quero que seja apresentado no cabeçalho da minha aplicação. Não se esqueça do comando `{% load static %}`.
+    - para incluir as partials nos arquivos de destino utilize o comando `include` da seguinte maneira: `{% include 'partials/header.html' %}`
 - [ ] Renderizando dados dinamicamente
 - [ ] Criando um dicionario com as receitas
 - [ ] Criando o banco de dados(MySQL/MariaDB)

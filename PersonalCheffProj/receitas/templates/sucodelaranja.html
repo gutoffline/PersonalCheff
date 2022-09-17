@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <h1>PersonalCheff</h1>
+{% include 'partials/header.html' %}
     <h2>Receita de suco de laranja</h2>
     <h3>Modo de preparo</h3>
     <ul>
@@ -12,4 +12,5 @@
     <p>
         <a href="{% url 'index' %}">Voltar</a>
     </p>
+{% include 'partials/footer.html' %}
 {% endblock %}
