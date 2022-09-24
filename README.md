@@ -196,7 +196,9 @@ INSTALLED_APPS[
     - Click no botão admin do Apache
     - Acesse o link PHPMyAdmin
     - Dentro do PHPMyAdmin, click no botão `novo` para criar um banco de dados, insira o nome `personalcheff_bd`
-- [ ] Instalando o conector do bando de dados MySQL
+- [X] Instalando o conector do bando de dados MySQL
+    - `pip install mysqlclient`
+- [ ] Configurar a conexão com mysql
 - [ ] Criando o modelo da receita
 - [ ] Criando a migration (mapeamento)
 - [ ] Realizando a migration
