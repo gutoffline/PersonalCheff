@@ -148,8 +148,49 @@ INSTALLED_APPS[
     - dentro da pasta `partials`crie os arquivos que serão as **partes globais** utilizadas no seu projeto como `header.html`, `footer.html`, `menu.html`, `side-bar.html`, `banner.html`, etc. No nosso exemplo criamos as partials `header.html` e `footer.html`
     - insira em cada um dos arquivos partials seus códigos correspondentes. Exemplo:  no arquivo `header.html` eu insiro todo o conteúdo que eu quero que seja apresentado no cabeçalho da minha aplicação. Não se esqueça do comando `{% load static %}`.
     - para incluir as partials nos arquivos de destino utilize o comando `include` da seguinte maneira: `{% include 'partials/header.html' %}`
-- [ ] Renderizando dados dinamicamente
-- [ ] Criando um dicionario com as receitas
+- [X] Renderizando dados dinamicamente
+    - Trocar as informações fixas no arquivo html por informações dinâmicas vindas do arquivo python. 
+    - Quero gerar a lista de receitas de foram dinâmica, vamos fazer isso utilizando o recurso do Django que passa uma informação para minhas templates(.html) através da passagem de uma parâmetro no comando `render` que está em minha view(.py):
+        ```python
+        return render(request,'index.html', {'nome_da_receita':'suco de laranja'})
+        ```
+    - Observer que passei através do comando `render` um `dicionário` para a template. Na minha template(`index.html`) eu posso exibir o conteúdo desse dicionário da seguinte forma:
+        ```python
+        <td><img src="{% static 'suco.png' %}" class="icone-suco">
+            {{nome_da_receita}}</td>
+        ```
+    - Vale a pena diferenciar o uso de `{{ }}` e `{% %}`:
+        - `{{ }}` é utilizado normalmente para exibir o valor de variáveis, para mostrar informação em tela
+        - `{% %}` é utilizado para o processamento de informações, usamos esses delimitadores quando precisamos de `if` ou `for`por exemplo.
+- [X] Criando um dicionario com as receitas
+    - No arquivo `views.py` vamos criar um dicionário com as receitas, modifique a função `index` da seguinte forma:
+        ```python
+        def index(request):
+            receitas = {
+                1:'Suco de Melão',
+                2:'Pizza',
+                3:'Suco de Limão',
+            }
+            
+            dados = {
+                'lista_receitas' : receitas
+            }
+            
+            return render(request,'index.html', dados)
+        ```
+    - na template `index.html`, eu faço um laço de repetição que verifique cada item da lista de receitas à cada passagem do laço:
+        ```python
+        {% for chave, uma_receita in lista_receitas.items %}
+            <tr>
+                <td>
+                    <img src="{% static 'suco.png' %}" class="icone-suco">
+                    {{uma_receita}}
+                </td>
+                <td>https://www.youtube.com/watch?v=Nn9140bDPnc</td>
+                <td><a href="{% url 'sucodelaranja' %}" class="btn btn-info">Ver receita completa</a></td>
+            </tr>
+        {% endfor %}
+        ```
 - [ ] Criando o banco de dados(MySQL/MariaDB)
 - [ ] Instalando o conector do bando de dados MySQL
 - [ ] Criando o modelo da receita

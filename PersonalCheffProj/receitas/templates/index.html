@@ -3,30 +3,23 @@
 {% block content %}
 {% include 'partials/header.html' %}
 {% include 'partials/menu.html' %}
-    <table border="1" class="table table-striped table-hover">
+    <table class="table table-striped table-hover">
         <tr class="table-dark">
             <th>Receita</th>
             <th>Vídeo</th>
             <th>Ações</th>
         </tr>
-        <tr>
-            <td>
-                <img src="{% static 'suco.png' %}" class="icone-suco">
-                Suco de laranja
-            </td>
-            <td>https://www.youtube.com/watch?v=Nn9140bDPnc</td>
-            <td><a href="{% url 'sucodelaranja' %}" class="btn btn-info">Ver receita completa</a></td>
-        </tr>
-        <tr>
-            <td>
-                <img src="{% static 'suco.png' %}" class="icone-suco">
-                Suco de limão
-            </td>
-            <td>https://www.youtube.com/watch?v=7aavIewcSY4</td>
-            <td>
-                <a href="{% url 'sucodelimao' %}">Ver receita completa</a>
-            </td>
-        </tr>
+        {% for chave, uma_receita in lista_receitas.items %}
+            <tr>
+                <td>
+                    <img src="{% static 'suco.png' %}" class="icone-suco">
+                    {{uma_receita}}
+                </td>
+                <td>https://www.youtube.com/watch?v=Nn9140bDPnc</td>
+                <td><a href="{% url 'sucodelaranja' %}" class="btn btn-info">Ver receita completa</a></td>
+            </tr>
+        {% endfor %}
+       
     </table>
 {% include 'partials/footer.html' %}
 {% endblock %}
