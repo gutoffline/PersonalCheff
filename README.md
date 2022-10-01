@@ -228,9 +228,14 @@ INSTALLED_APPS[
 - [X] Criando a migration (mapeamento)
     - preparar todas as models criadas para serem migradas para o banco de dados
     - no terminal digite `python manage.py makemigrations` 
-- [ ] Realizando a migration
+- [X] Realizando a migration
+    - Realizar a migração é criar fisicamente no banco de dados as tabelas preparadas anteriormente, e, no nosso caso, as tabelas prepradas pelo django para o seu ambiente administrativo
+    - No terminal digite `python manage.py migrate`
+- [x] Criando um usuário para o ambiente administrativo
+    - O DJANGO já cria um ambiente administrativo para nossa aplicação, ficando esse ambiente em: `http://127.0.0.1:8000/admin/`
+    - Para utilizar o ambiente administrativo precisamos criar um usuário de acesso. No terminal digite        `python manage.py createsuperuser`
+    - ***Obs: Quando digitar a senha, ela vai ficar em branco
 - [ ] Registrando um modelo no admin
-- [ ] Criando um usuário para o ambiente administrativo
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
