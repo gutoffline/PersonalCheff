@@ -197,9 +197,20 @@ INSTALLED_APPS[
     - Acesse o link PHPMyAdmin
     - Dentro do PHPMyAdmin, click no botão `novo` para criar um banco de dados, insira o nome `personalcheff_bd`
 - [X] Instalando o conector do bando de dados MySQL
-    - `pip install mysqlclient`
-- [ ] Configurar a conexão com mysql
-- [ ] Criando o modelo da receita
+    - `pip install mysqlclient` se der acesso negado tente `python -m pip install mysqlclient` 
+- [X] Configurar a conexão com mysql
+    - No arquivo `settings.py` , na linha ~78 configurar a conexão para o seu banco de dados como no exemplo
+        ```python
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'personalcheff_bd',
+                'USER': 'root',
+                'PASSWORD': '',
+                'HOST': 'localhost',
+                'PORT': '3306',
+            }
+        ```
+- [X] Criando o modelo da receita
 - [ ] Criando a migration (mapeamento)
 - [ ] Realizando a migration
 - [ ] Registrando um modelo no admin
