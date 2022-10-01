@@ -244,6 +244,9 @@ INSTALLED_APPS[
 
         admin.site.register(Receitas)
         ```
+- [] Trazendo os dados do banco de dados
+- [] Exibição das páginas individuais das receitas
+
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
