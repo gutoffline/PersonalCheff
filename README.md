@@ -244,8 +244,8 @@ INSTALLED_APPS[
 
         admin.site.register(Receitas)
         ```
-- [] Trazendo os dados do banco de dados
-- [] Exibição das páginas individuais das receitas
+- [X] Trazendo os dados do banco de dados
+- [X] Exibição das páginas individuais das receitas
 
 
 ## 📝 Licença
